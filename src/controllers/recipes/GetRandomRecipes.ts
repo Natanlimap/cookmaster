@@ -6,7 +6,7 @@ export class GetRandomRecipes{
      async handle(request: Request, response: Response){
         let recipes = new Recipe();
         let allRecipes = recipes.getAllRecipes();
-        return response.json(shuffle(allRecipes).slice(0, 3).map(m=>m.title));
+        return response.json(shuffle(allRecipes).slice(0, 3));
 
         
      }

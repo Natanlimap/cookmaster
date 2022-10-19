@@ -14,7 +14,7 @@ export class GetRecipesByIngredientRestrictedController{
                 possibileRecipes.push(recipe);
             }
          })
-         return response.json(possibileRecipes.map(m=>m.title));
+         return response.json(possibileRecipes);
 
         
      }

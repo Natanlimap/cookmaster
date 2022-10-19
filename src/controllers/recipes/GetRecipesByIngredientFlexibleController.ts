@@ -8,12 +8,11 @@ export class GetRecipesByIngredientFlexbileController{
          let allRecipes = recipes.getAllRecipes();
          let possibileRecipes = []
          allRecipes.forEach(recipe => {
-            console.log(recipe)
             if(recipe.ingredients.some(ri => ingredients.includes(ri))){
                 possibileRecipes.push(recipe);
             }
          })
-         return response.json(possibileRecipes.map(m=>m.title));
+         return response.json(possibileRecipes);
 
         
      }
